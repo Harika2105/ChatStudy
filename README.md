@@ -74,18 +74,47 @@ Client-server chat applications are versatile tools that facilitate real-time co
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
 
 ## Program :
-![Screenshot 2025-04-03 123829](https://github.com/user-attachments/assets/21028c11-bc62-456d-955c-faa892a44741)
+Register no:212224240155 Name:S.Harika
 
-server.py
-
-![Screenshot 2025-04-03 123841](https://github.com/user-attachments/assets/3e4ea498-5c6f-4efd-8bc8-a411f746aa77)
-
-
+## client:
+```
+import socket
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+size=int(input("Enter number of frames to send : "))
+l=list(range(size))
+s=int(input("Enter Window Size : "))
+st=0
+i=0
+while True:
+while(i<len(l)):
+st+=s
+c.send(str(l[i:st]).encode())
+ack=c.recv(1024).decode()
+if ack:
+print(ack)
+i+=s
+```
+## server:
+```
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
+```
 
 ## Output:
-![Screenshot 2025-04-03 121439](https://github.com/user-attachments/assets/52c1b079-4b96-4b2f-9e88-59f17402ddd9)
 
-![Screenshot 2025-04-03 121418](https://github.com/user-attachments/assets/b23a014c-ac40-4cbf-adbe-70f962c00db4)
+## CLIENT:
+![Screenshot 2025-04-08 102629](https://github.com/user-attachments/assets/4e37c488-3ea6-4790-a8f5-dd4a5274280f)
+
+## SERVER:
+![Screenshot 2025-04-08 102658](https://github.com/user-attachments/assets/3cd8ed10-ccb0-4b35-b05c-2038faabccee)
+
 
 
 
