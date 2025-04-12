@@ -109,12 +109,7 @@ s.send("acknowledgement recived from the server".encode())
 
 ## Output:
 
-## CLIENT:
-![Screenshot 2025-04-08 102629](https://github.com/user-attachments/assets/4e37c488-3ea6-4790-a8f5-dd4a5274280f)
-
-## SERVER:
-![Screenshot 2025-04-08 102658](https://github.com/user-attachments/assets/3cd8ed10-ccb0-4b35-b05c-2038faabccee)
-
+![Screenshot 2025-04-12 134957](https://github.com/user-attachments/assets/e3466df3-5de9-487d-ade1-44c4dc96aaf1)
 
 
 
